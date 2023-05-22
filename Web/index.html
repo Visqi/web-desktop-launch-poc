@@ -1,0 +1,19 @@
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+<a data-token="POCWebLaunch" id="poc-button">Launch POC</a>
+
+
+<script>
+
+$(document).ready(function(e) {
+	
+	$("#poc-button").click(function(e){
+		e.preventDefault();
+		let token = $(this).data("token");
+		
+		window.location.assign("custompoc://launch/" + token);
+	});
+
+});
+
+</script>
